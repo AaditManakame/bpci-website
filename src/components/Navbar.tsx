@@ -71,7 +71,7 @@ export default function Navbar() {
             src="/images/logo/logo.png"
             alt="Bio-Pest Control Industries"
             className={`w-auto object-contain transition-all duration-300 ${
-              scrolled ? "h-[48px]" : "h-[62px] sm:h-[68px]"
+              scrolled ? "h-[60px]" : "h-[74px] sm:h-[80px]"
             }`}
           />
         </Link>
