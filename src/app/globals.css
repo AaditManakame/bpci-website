@@ -3,10 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #1f2421;
-  --primary: #008a3b;
-  --primary-dark: #006b2d;
-  --muted: #f5f7f5;
-  --border: #e2e6e3;
+
+  --primary: #08783b;
+  --primary-dark: #055c2c;
+
+  --muted: #f5f7f3;
+  --border: #e3e7e3;
 }
 
 * {
@@ -48,5 +50,3 @@ a {
   background: var(--primary);
   color: white;
 }
-
-
