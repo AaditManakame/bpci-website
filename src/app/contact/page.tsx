@@ -39,8 +39,19 @@ function ContactForm() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (requestedProduct && products.includes(requestedProduct)) {
-      setSelectedProduct(requestedProduct);
+    if (!requestedProduct) {
+      return;
+    }
+
+    const matchingProduct = products.find(
+      (product) =>
+        product === requestedProduct ||
+        requestedProduct.startsWith(`${product} `) ||
+        product.startsWith(`${requestedProduct} `)
+    );
+
+    if (matchingProduct) {
+      setSelectedProduct(matchingProduct);
     }
   }, [requestedProduct]);
 
@@ -76,7 +87,7 @@ function ContactForm() {
 
       if (!response.ok) {
         throw new Error(
-          result.error || "Unable to send your enquiry.",
+          result.error || "Unable to send your enquiry."
         );
       }
 
@@ -87,7 +98,7 @@ function ContactForm() {
       setError(
         err instanceof Error
           ? err.message
-          : "Something went wrong. Please try again.",
+          : "Something went wrong. Please try again."
       );
     } finally {
       setIsSubmitting(false);
