@@ -11,30 +11,50 @@ const companyLinks = [
 const solutionLinks = [
   {
     name: "Plant Nutrition",
-    href: "/solutions#plant-nutrition",
+    href: "/products?category=plant-nutrition",
   },
   {
     name: "Plant Protection",
-    href: "/solutions#plant-protection",
+    href: "/products?category=plant-protection",
   },
   {
     name: "Soil Health",
-    href: "/solutions#soil-health",
-  },
-  {
-    name: "Biological Product Development",
-    href: "/solutions#product-development",
+    href: "/products?category=soil-health",
   },
 ];
+
+const contactDetails = {
+  address: (
+    <>
+      #51/3, Agrahara, Yelahanka
+      <br />
+      Bengaluru – 560064
+    </>
+  ),
+  phoneNumbers: [
+    {
+      display: "+91 93419 72727",
+      href: "tel:+919341972727",
+    },
+    {
+      display: "+91 70196 39489",
+      href: "tel:+917019639489",
+    },
+    {
+      display: "+91 98458 30168",
+      href: "tel:+919845830168",
+    },
+  ],
+  email: "bpcibangalore@gmail.com",
+};
 
 export default function Footer() {
   return (
     <footer className="bg-[#1d211f] text-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.25fr_0.8fr_0.9fr_1.1fr]">
           {/* Company */}
-          <div className="lg:col-span-1">
+          <div>
             <Link href="/" className="inline-block">
               <img
                 src="/images/logo/logo.png"
@@ -47,6 +67,13 @@ export default function Footer() {
               Quality biological and plant nutrition solutions supporting
               healthier crops, healthier soil and sustainable farming.
             </p>
+
+            <Link
+              href="/about"
+              className="mt-6 inline-flex text-sm font-semibold text-gray-300 hover:text-white"
+            >
+              Learn More About BPCI →
+            </Link>
           </div>
 
           {/* Company Links */}
@@ -87,6 +114,13 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+
+            <Link
+              href="/solutions"
+              className="mt-6 inline-flex text-sm font-semibold text-gray-300 hover:text-white"
+            >
+              View All Solutions →
+            </Link>
           </div>
 
           {/* Contact */}
@@ -97,42 +131,38 @@ export default function Footer() {
 
             <div className="mt-6 space-y-5 text-sm leading-7 text-gray-400">
               <p>
-                Bio-Pest Control Industries
+                <span className="text-gray-300">
+                  Bio-Pest Control Industries
+                </span>
                 <br />
-                #51/3, Agrahara, Yelahanka
-                <br />
-                Bengaluru – 560064
+                {contactDetails.address}
               </p>
 
               <div>
-                <a
-                  href="tel:+919341972727"
-                  className="block hover:text-white"
-                >
-                  +91 93419 72727
-                </a>
-
-                <a
-                  href="tel:+917019639489"
-                  className="block hover:text-white"
-                >
-                  +91 70196 39489
-                </a>
-
-                <a
-                  href="tel:+919845830168"
-                  className="block hover:text-white"
-                >
-                  +91 98458 30168
-                </a>
+                {contactDetails.phoneNumbers.map((phone) => (
+                  <a
+                    key={phone.href}
+                    href={phone.href}
+                    className="block hover:text-white"
+                  >
+                    {phone.display}
+                  </a>
+                ))}
               </div>
 
               <a
-                href="mailto:bpcibangalore@gmail.com"
+                href={`mailto:${contactDetails.email}`}
                 className="block break-all hover:text-white"
               >
-                bpcibangalore@gmail.com
+                {contactDetails.email}
               </a>
+
+              <Link
+                href="/contact"
+                className="inline-flex rounded-md border border-white/20 px-4 py-2.5 text-sm font-semibold text-gray-200 hover:border-white/40 hover:text-white"
+              >
+                Send an Enquiry
+              </Link>
             </div>
           </div>
         </div>
