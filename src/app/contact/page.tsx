@@ -96,6 +96,7 @@ function ContactForm() {
       email: formData.get("email"),
       product: formData.get("product"),
       message: formData.get("message"),
+      website: formData.get("website"),
     };
 
     try {
@@ -174,6 +175,14 @@ function ContactForm() {
       )}
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+        <input
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="absolute -left-[9999px] h-0 w-0 overflow-hidden opacity-0"
+        />
         <div>
           <label
             htmlFor="name"
