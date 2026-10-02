@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -16,6 +16,21 @@ const navigation = [
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   function closeMenu() {
     setMobileMenuOpen(false);
@@ -34,8 +49,18 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
+    <header
+      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+        scrolled
+          ? "border-gray-200 bg-white shadow-[0_6px_20px_rgba(0,0,0,0.10)]"
+          : "border-[var(--border)] bg-white/95 backdrop-blur"
+      }`}
+    >
+      <div
+        className={`mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8 transition-all duration-300 ${
+          scrolled ? "h-16" : "h-20"
+        }`}
+      >
         {/* Logo */}
         <Link
           href="/"
@@ -45,7 +70,9 @@ export default function Navbar() {
           <img
             src="/images/logo/logo.png"
             alt="Bio-Pest Control Industries"
-            className="h-[62px] w-auto object-contain sm:h-[68px]"
+            className={`w-auto object-contain transition-all duration-300 ${
+              scrolled ? "h-[48px]" : "h-[62px] sm:h-[68px]"
+            }`}
           />
         </Link>
 

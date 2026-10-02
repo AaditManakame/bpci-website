@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
+
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bpci-website.vercel.app"),
-
   title: {
     default:
       "Bio-Pest Control Industries | Biological Solutions for Sustainable Agriculture",
     template: "%s | Bio-Pest Control Industries",
   },
-
   description:
     "Bio-Pest Control Industries provides biological, plant nutrition, plant protection and soil health solutions for sustainable agriculture.",
-
   keywords: [
     "Bio-Pest Control Industries",
     "BPCI",
@@ -27,15 +28,12 @@ export const metadata: Metadata = {
     "agricultural biological products",
     "Bengaluru",
   ],
-
   authors: [
     {
       name: "Bio-Pest Control Industries",
     },
   ],
-
   creator: "Bio-Pest Control Industries",
-
   openGraph: {
     title:
       "Bio-Pest Control Industries | Biological Solutions for Sustainable Agriculture",
@@ -45,7 +43,6 @@ export const metadata: Metadata = {
     locale: "en_IN",
     siteName: "Bio-Pest Control Industries",
   },
-
   robots: {
     index: true,
     follow: true,
@@ -60,8 +57,13 @@ export default function RootLayout({
   return (
     <html lang="en-IN">
       <body>
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
+
         <Footer />
+
+        <WhatsAppButton />
       </body>
     </html>
   );
