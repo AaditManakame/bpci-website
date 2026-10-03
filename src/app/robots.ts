@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://bpci-website.vercel.app/sitemap.xml",
+    sitemap: "https://biopestindia.com/sitemap.xml",
   };
 }
