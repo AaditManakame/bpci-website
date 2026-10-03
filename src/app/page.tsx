@@ -30,9 +30,9 @@ export default function Home() {
 
           <div className="relative mx-auto flex min-h-[680px] max-w-7xl items-end px-6 pb-20 pt-32 lg:min-h-[760px] lg:px-8 lg:pb-24">
             <Reveal className="max-w-4xl text-white">
-              <p className="mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-white/80">
-                Bio-Pest Control Industries
-              </p>
+              <p className="mb-8 text-xl font-semibold uppercase tracking-[0.22em] text-white/90 sm:text-2xl lg:text-4xl">
+  Biopest Control Industries
+</p>
 
               <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
                 Biological solutions
@@ -84,7 +84,7 @@ export default function Home() {
                 </h2>
 
                 <p className="mt-7 max-w-3xl text-lg leading-8 text-gray-600">
-                  Bio-Pest Control Industries is committed to providing quality
+                  Biopest Control Industries is committed to providing quality
                   biological and plant nutrition solutions that support healthy
                   crops, healthy soil and sustainable farming. Our portfolio
                   brings together biofertilizers, biocontrol agents, botanical
