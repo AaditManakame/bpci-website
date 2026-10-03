@@ -6,20 +6,25 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 import "./globals.css";
 
+const siteUrl = "https://www.biopestindia.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bpci-website.vercel.app"),
+  metadataBase: new URL(siteUrl),
+
   title: {
     default:
-      "Bio Pest  Control Industries | Biological Solutions for Sustainable Agriculture",
-    template: "%s | Bio Pest  Control Industries",
+      "Bio Pest Control Industries | Biological Solutions for Sustainable Agriculture",
+    template: "%s | Bio Pest Control Industries",
   },
+
   description:
-    "Bio Pest   Control Industries provides biological, plant nutrition, plant protection and soil health solutions for sustainable agriculture.",
+    "Bio Pest Control Industries provides biological, plant nutrition, plant protection and soil health solutions for sustainable agriculture.",
+
   keywords: [
-    "Bio Pest   Control Industries",
+    "Bio Pest Control Industries",
     "BPCI",
-    "biofertilizers", 
-    "Bio Pest  icides",
+    "biofertilizers",
+    "biopesticides",
     "plant nutrition",
     "plant protection",
     "soil health",
@@ -27,22 +32,32 @@ export const metadata: Metadata = {
     "sustainable agriculture",
     "agricultural biological products",
     "Bengaluru",
+    "Bangalore",
   ],
+
   authors: [
     {
-      name: "Bio Pest   Control Industries",
+      name: "Bio Pest Control Industries",
     },
   ],
-  creator: "Bio Pest   Control Industries",
+
+  creator: "Bio Pest Control Industries",
+
+  alternates: {
+    canonical: siteUrl,
+  },
+
   openGraph: {
     title:
-      "Bio Pest   Control Industries | Biological Solutions for Sustainable Agriculture",
+      "Bio Pest Control Industries | Biological Solutions for Sustainable Agriculture",
     description:
       "Biological, plant nutrition, plant protection and soil health solutions for sustainable agriculture.",
+    url: siteUrl,
     type: "website",
     locale: "en_IN",
-    siteName: "Bio Pest   Control Industries",
+    siteName: "Bio Pest Control Industries",
   },
+
   robots: {
     index: true,
     follow: true,
