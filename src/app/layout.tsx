@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   ],
 
   creator: "Bio Pest Control Industries",
+  publisher: "Bio Pest Control Industries",
 
   alternates: {
     canonical: siteUrl,
@@ -53,14 +54,26 @@ export const metadata: Metadata = {
     description:
       "Biological, plant nutrition, plant protection and soil health solutions for sustainable agriculture.",
     url: siteUrl,
+    siteName: "Bio Pest Control Industries",
     type: "website",
     locale: "en_IN",
-    siteName: "Bio Pest Control Industries",
+  },
+
+  twitter: {
+    card: "summary",
+    title:
+      "Bio Pest Control Industries | Biological Solutions for Sustainable Agriculture",
+    description:
+      "Biological, plant nutrition, plant protection and soil health solutions for sustainable agriculture.",
   },
 
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
@@ -71,6 +84,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN">
+      <head>
+        <link rel="canonical" href={siteUrl} />
+        <meta property="og:url" content={siteUrl} />
+      </head>
+
       <body>
         <PageTransition>
           {children}
