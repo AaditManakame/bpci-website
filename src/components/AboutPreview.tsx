@@ -17,7 +17,7 @@ export default function AboutPreview() {
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Bio-Pest Control Industries is committed to supporting modern
+              Bio Pest  Control Industries is committed to supporting modern
               agriculture through quality biological and plant nutrition
               solutions.
             </p>

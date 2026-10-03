@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
   const phoneNumber = "917019639489";
 
   const message =
-    "Hello Bio-Pest Control Industries, I would like to enquire about your agricultural biological products.";
+    "Hello Bio Pest  Control Industries, I would like to enquire about your agricultural biological products.";
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message,
@@ -17,7 +17,7 @@ export default function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contact Bio-Pest Control Industries on WhatsApp"
+      aria-label="Contact Bio Pest  Control Industries on WhatsApp"
       className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_20px_rgba(0,0,0,0.18)] transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_24px_rgba(0,0,0,0.22)] sm:bottom-7 sm:right-7"
     >
       <svg

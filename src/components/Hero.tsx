@@ -10,7 +10,7 @@ export default function Hero() {
               <span className="h-px w-10 bg-[var(--primary)]" />
 
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--primary)]">
-                Bio-Pest Control Industries
+                Bio Pest  Control Industries
               </p>
             </div>
 

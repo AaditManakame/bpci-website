@@ -163,7 +163,7 @@ function ContactForm() {
         <div className="mt-6 border border-green-200 bg-green-50 p-4 text-sm leading-6 text-green-800">
           <strong>Enquiry sent successfully.</strong>
           <br />
-          Thank you for contacting Bio-Pest Control Industries. Our team will
+          Thank you for contacting Bio Pest Control Industries. Our team will
           get back to you.
         </div>
       )}
@@ -355,7 +355,7 @@ function ContactPageContent() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600">
-                Get in touch with Bio-Pest Control Industries for product
+                Get in touch with Bio Pest  Control Industries for product
                 information, agricultural requirements and enquiries.
               </p>
             </div>
@@ -373,7 +373,7 @@ function ContactPageContent() {
                 </p>
 
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
-                  Bio-Pest Control Industries
+                  Bio Pest Control Industries
                 </h2>
 
                 <p className="mt-6 max-w-lg text-lg leading-8 text-gray-600">
@@ -402,13 +402,7 @@ function ContactPageContent() {
                     </p>
 
                     <div className="mt-3 space-y-2">
-                      <a
-                        href="tel:+919341972727"
-                        className="block text-gray-700 hover:text-[var(--primary)]"
-                      >
-                        +91 93419 72727
-                      </a>
-
+                      
                       <a
                         href="tel:+917019639489"
                         className="block text-gray-700 hover:text-[var(--primary)]"
@@ -528,7 +522,7 @@ function ContactPageContent() {
 
             <p className="mx-auto mt-5 max-w-2xl leading-7 text-gray-600">
               Explore our complete product portfolio or get in touch directly
-              with Bio-Pest Control Industries.
+              with Bio Pest  Control Industries.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">

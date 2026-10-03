@@ -66,7 +66,7 @@ export default function AboutPage() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600">
-                Bio-Pest Control Industries provides biological, plant
+                Bio Pest Control Industries provides biological, plant
                 nutrition, plant protection and soil health solutions designed
                 to support healthy crops, healthy soil and sustainable farming.
               </p>
@@ -90,7 +90,7 @@ export default function AboutPage() {
 
               <div className="space-y-6 text-lg leading-8 text-gray-600">
                 <p>
-                  Bio-Pest Control Industries is committed to supporting modern
+                  Bio Pest Control Industries is committed to supporting modern
                   agriculture through quality biological and plant nutrition
                   solutions.
                 </p>

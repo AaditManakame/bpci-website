@@ -226,7 +226,7 @@ export default async function ProductDetailPage({
 
             <p className="mx-auto mt-5 max-w-2xl leading-7 text-gray-600">
               Explore biological, plant nutrition, plant protection and soil
-              health solutions from Bio-Pest Control Industries.
+              health solutions from Bio Pest  Control Industries.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">

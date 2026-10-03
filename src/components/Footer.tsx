@@ -58,7 +58,7 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <img
                 src="/images/logo/logo.png"
-                alt="Bio-Pest Control Industries"
+                alt="Bio Pest Control Industries"
                 className="h-[78px] w-auto object-contain"
               />
             </Link>
@@ -132,7 +132,7 @@ export default function Footer() {
             <div className="mt-6 space-y-5 text-sm leading-7 text-gray-400">
               <p>
                 <span className="text-gray-300">
-                  Bio-Pest Control Industries
+                  Bio Pest   Control Industries
                 </span>
                 <br />
                 {contactDetails.address}
@@ -170,7 +170,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} Bio-Pest Control Industries. All
+            © {new Date().getFullYear()} Bio Pest   Control Industries. All
             rights reserved.
           </p>
 

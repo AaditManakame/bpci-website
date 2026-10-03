@@ -186,7 +186,7 @@ export const products: Product[] = [
     type: "Bacillus thuringiensis 10% WSL",
     image: "/images/products/bio-bectin.jpg",
     description:
-      "BPCI-BTK contains Bacillus thuringiensis var. kurstaki, a naturally occurring microbial biopesticide effective against susceptible caterpillar pests, particularly the larval stages of several lepidopteran insects. After ingestion by susceptible larvae, Bt produces insecticidal proteins that disrupt the larval gut, leading to cessation of feeding and eventual mortality.",
+      "BPCI-BTK contains Bacillus thuringiensis var. kurstaki, a naturally occurring microbial Bio Pesticide effective against susceptible caterpillar pests, particularly the larval stages of several lepidopteran insects. After ingestion by susceptible larvae, Bt produces insecticidal proteins that disrupt the larval gut, leading to cessation of feeding and eventual mortality.",
     benefits: [
       "Helps control susceptible caterpillar and lepidopteran larval pests",
       "Acts primarily through ingestion by the target larvae",
@@ -219,10 +219,10 @@ export const products: Product[] = [
     slug: "nemoleum",
     name: "BPCI-NEEMOLEUM (0.15% and 1%)",
     category: "Plant Protection",
-    type: "Neem-Based Botanical Biopesticide",
+    type: "Neem-Based Botanical Bio Pesticide",
     image: "/images/products/nemoleum.jpg",
     description:
-      "BPCI-NEEMOLEUM is a neem-based botanical biopesticide containing Azadirachtin, a naturally occurring bioactive compound derived from neem (Azadirachta indica). It helps manage a wide range of insect pests by interfering with feeding, growth, development and reproduction, making it a valuable component of Integrated Pest Management (IPM) programmes.",
+      "BPCI-NEEMOLEUM is a neem-based botanical Bio Pesticide containing Azadirachtin, a naturally occurring bioactive compound derived from neem (Azadirachta indica). It helps manage a wide range of insect pests by interfering with feeding, growth, development and reproduction, making it a valuable component of Integrated Pest Management (IPM) programmes.",
     benefits: [
       "Helps manage a broad range of sucking and chewing insect pests",
       "Acts primarily as an antifeedant and insect growth regulator",
