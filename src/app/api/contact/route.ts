@@ -65,7 +65,7 @@ export async function POST(request: Request) {
 
     const { error } = await resend.emails.send({
       from: "BPCI Website <onboarding@resend.dev>",
-      to: ["1ms23cs001@gmail.com"],
+      to: ["bpcibangalore@gmail.com"],
       replyTo: email,
       subject: `New Product Enquiry — ${product}`,
       text: `
