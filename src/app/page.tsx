@@ -100,6 +100,55 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FIELD PHOTOGRAPHY */}
+        <section className="bg-white py-16 lg:py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--primary)]">
+                  From the field
+                </p>
+                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
+                  Agriculture, in focus.
+                </h2>
+              </div>
+              <Link
+                href="/gallery"
+                className="text-sm font-semibold text-[var(--primary)] hover:text-[var(--primary-dark)]"
+              >
+                View gallery →
+              </Link>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <Link href="/gallery" className="group block overflow-hidden bg-[#f1f4f1] sm:col-span-2 lg:col-span-2">
+                <img
+                  src="/images/gallery/gallery-01.jpg"
+                  alt="Crops growing in an agricultural field"
+                  loading="lazy"
+                  className="aspect-[4/3] h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </Link>
+              <Link href="/gallery" className="group block overflow-hidden bg-[#f1f4f1]">
+                <img
+                  src="/images/gallery/gallery-06.jpg"
+                  alt="Flower cultivation in a greenhouse"
+                  loading="lazy"
+                  className="aspect-[4/3] h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </Link>
+              <Link href="/gallery" className="group block overflow-hidden bg-[#f1f4f1]">
+                <img
+                  src="/images/gallery/gallery-07.jpg"
+                  alt="Pomegranate crop"
+                  loading="lazy"
+                  className="aspect-[4/3] h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* AT A GLANCE */}
         <section className="bg-[#f6f8f5] py-20 lg:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">

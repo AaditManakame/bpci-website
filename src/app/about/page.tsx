@@ -73,7 +73,8 @@ export default function AboutPage() {
         {/* Hero */}
         <section className="bg-[#f7f8f6] py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="max-w-4xl">
+            <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
+              <div className="max-w-4xl">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
                 About BPCI
               </p>
@@ -88,6 +89,16 @@ export default function AboutPage() {
                 nutrition, plant protection and soil health solutions designed
                 to support healthy crops, healthy soil and sustainable farming.
               </p>
+              </div>
+
+              <div className="relative overflow-hidden bg-[#f1f4f1]">
+                <img
+                  src="/images/gallery/gallery-06.jpg"
+                  alt="Flower cultivation in a greenhouse"
+                  className="aspect-[4/3] w-full object-cover"
+                  fetchPriority="high"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -130,6 +141,30 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Field photography */}
+        <section className="bg-white pb-16 lg:pb-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid gap-5 md:grid-cols-3">
+              <div className="overflow-hidden bg-[#f1f4f1] md:col-span-2">
+                <img
+                  src="/images/gallery/gallery-07.jpg"
+                  alt="Pomegranate crop in the field"
+                  loading="lazy"
+                  className="aspect-[16/9] w-full object-cover"
+                />
+              </div>
+              <div className="overflow-hidden bg-[#f1f4f1]">
+                <img
+                  src="/images/gallery/gallery-13.jpg"
+                  alt="Plant roots and nursery growth"
+                  loading="lazy"
+                  className="aspect-[4/5] h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Solution areas */}
         <section className="bg-[#f7f8f6] py-24 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -154,8 +189,23 @@ export default function AboutPage() {
                 <Link
                   key={area.number}
                   href={area.href}
-                  className="group border border-[var(--border)] bg-white p-8 transition-colors hover:bg-[#fafbf9]"
+                  className="group border border-[var(--border)] bg-white p-5 transition-colors hover:bg-[#fafbf9]"
                 >
+                  <div className="mb-6 overflow-hidden bg-[#f1f4f1]">
+                    <img
+                      src={
+                        area.number === "01"
+                          ? "/images/gallery/gallery-12.jpg"
+                          : area.number === "02"
+                            ? "/images/gallery/gallery-05.jpg"
+                            : "/images/gallery/gallery-13.jpg"
+                      }
+                      alt={area.title}
+                      loading="lazy"
+                      className="aspect-[5/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="p-3">
                   <p className="text-sm font-semibold text-[var(--primary)]">
                     {area.number}
                   </p>
@@ -171,6 +221,7 @@ export default function AboutPage() {
                   <p className="mt-7 text-sm font-semibold text-[var(--primary)] group-hover:text-[var(--primary-dark)]">
                     Explore Solutions →
                   </p>
+                  </div>
                 </Link>
               ))}
             </div>

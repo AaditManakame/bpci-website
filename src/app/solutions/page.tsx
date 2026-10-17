@@ -109,7 +109,8 @@ export default function SolutionsPage() {
         {/* Hero */}
         <section className="bg-[#f7f8f6] py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="max-w-4xl">
+            <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
+              <div className="max-w-4xl">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
                 Our Solutions
               </p>
@@ -123,6 +124,16 @@ export default function SolutionsPage() {
                 protection and soil health solutions designed to support
                 healthier crops and more sustainable farming practices.
               </p>
+              </div>
+
+              <div className="overflow-hidden bg-[#f1f4f1]">
+                <img
+                  src="/images/gallery/gallery-08.jpg"
+                  alt="Watermelon crop growing in the field"
+                  className="aspect-[4/3] w-full object-cover"
+                  fetchPriority="high"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -187,8 +198,23 @@ export default function SolutionsPage() {
                       </p>
                     </div>
 
-                    <div className="p-8 lg:p-10">
-                      <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr]">
+                    <div className="p-6 lg:p-8">
+                      <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+                        <div className="overflow-hidden bg-[#f1f4f1]">
+                          <img
+                            src={
+                              solution.number === "01"
+                                ? "/images/gallery/gallery-12.jpg"
+                                : solution.number === "02"
+                                  ? "/images/gallery/gallery-05.jpg"
+                                  : "/images/gallery/gallery-13.jpg"
+                            }
+                            alt={solution.title}
+                            loading="lazy"
+                            className="aspect-[4/3] w-full object-cover"
+                          />
+                        </div>
+                        <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr]">
                         <div>
                           <h3 className="text-2xl font-semibold text-[var(--foreground)] sm:text-3xl">
                             {solution.title}
@@ -225,6 +251,7 @@ export default function SolutionsPage() {
                           </ul>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
                 </Link>
