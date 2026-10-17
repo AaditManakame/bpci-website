@@ -1,55 +1,54 @@
+
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
-const galleryItems = [
-  {
-    image: "/images/gallery/gallery-1.jpg",
-    category: "Agriculture",
-    title: "Supporting healthier crops",
-    description:
-      "Biological and plant nutrition solutions designed to support healthy crop development and sustainable agricultural practices.",
-    size: "large",
+export const metadata: Metadata = {
+  title: "Gallery",
+  description:
+    "Explore Bio Pest Control Industries field photographs, crops, nursery plants, flowers and agricultural videos.",
+  alternates: {
+    canonical: "https://www.biopestindia.com/gallery",
   },
-  {
-    image: "/images/gallery/gallery-2.jpg",
-    category: "Plant Nutrition",
-    title: "Better nutrition through biology",
+  openGraph: {
+    title: "Gallery | Bio Pest Control Industries",
     description:
-      "Solutions that support nutrient availability, root development and efficient crop nutrition.",
-    size: "small",
+      "Explore BPCI field photographs, crops, nursery plants, flowers and agricultural videos.",
+    url: "https://www.biopestindia.com/gallery",
+    type: "website",
+    locale: "en_IN",
+    siteName: "Bio Pest Control Industries",
   },
-  {
-    image: "/images/gallery/gallery-3.jpg",
-    category: "Plant Protection",
-    title: "Biological crop protection",
-    description:
-      "Biological and botanical approaches supporting integrated crop protection programmes.",
-    size: "small",
-  },
-  {
-    image: "/images/gallery/gallery-4.jpg",
-    category: "Soil Health",
-    title: "Building healthier soil",
-    description:
-      "Products and practices supporting soil biological activity, organic matter and nutrient cycling.",
-    size: "small",
-  },
-  {
-    image: "/images/gallery/gallery-5.jpg",
-    category: "BPCI Products",
-    title: "Solutions for modern agriculture",
-    description:
-      "A portfolio of biological, plant nutrition, plant protection and soil health products.",
-    size: "large",
-  },
-  {
-    image: "/images/gallery/gallery-6.jpg",
-    category: "Sustainable Agriculture",
-    title: "From nature to field",
-    description:
-      "Practical biological solutions developed to work alongside modern agricultural practices.",
-    size: "small",
-  },
+};
+
+const photos = [
+  "/images/gallery/gallery-01.jpg",
+  "/images/gallery/gallery-02.jpg",
+  "/images/gallery/gallery-03.jpg",
+  "/images/gallery/gallery-04.jpg",
+  "/images/gallery/gallery-05.jpg",
+  "/images/gallery/gallery-06.jpg",
+  "/images/gallery/gallery-07.jpg",
+  "/images/gallery/gallery-08.jpg",
+  "/images/gallery/gallery-09.jpg",
+  "/images/gallery/gallery-10.jpg",
+  "/images/gallery/gallery-11.jpg",
+  "/images/gallery/gallery-12.jpg",
+  "/images/gallery/gallery-13.jpg",
+  "/images/gallery/gallery-14.jpg",
+  "/images/gallery/gallery-15.jpg",
+  "/images/gallery/gallery-16.jpg",
+  "/images/gallery/gallery-17.jpg",
+  "/images/gallery/gallery-18.jpg",
+];
+
+const videos = [
+  "/images/gallery/gallery-video-01.mp4",
+  "/images/gallery/gallery-video-02.mp4",
+  "/images/gallery/gallery-video-03.mp4",
+  "/images/gallery/gallery-video-04.mp4",
+  "/images/gallery/gallery-video-05.mp4",
+  "/images/gallery/gallery-video-06.mp4",
 ];
 
 export default function GalleryPage() {
@@ -58,96 +57,74 @@ export default function GalleryPage() {
       <Navbar />
 
       <main>
-        {/* Hero */}
-        <section className="bg-[#f7f8f6] py-24 lg:py-32">
+        <section className="bg-[#f7f8f6] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="max-w-4xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-                Gallery
-              </p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
+              Gallery
+            </p>
 
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--foreground)] sm:text-5xl lg:text-6xl">
-                From nature to field.
-              </h1>
-
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-                Explore BPCI&apos;s approach to biological agriculture, plant
-                nutrition, crop protection and soil health.
-              </p>
-            </div>
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--foreground)] sm:text-5xl lg:text-6xl">
+              From nature to field.
+            </h1>
           </div>
         </section>
 
-        {/* Gallery */}
-        <section className="bg-white py-20 lg:py-28">
+        <section className="bg-white py-12 lg:py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid gap-6 lg:grid-cols-12">
-              {galleryItems.map((item, index) => (
-                <article
-                  key={item.image}
-                  className={`group overflow-hidden border border-[var(--border)] bg-white ${
-                    item.size === "large"
-                      ? "lg:col-span-7"
-                      : "lg:col-span-5"
-                  }`}
+            <h2 className="mb-8 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
+              Photo Gallery
+            </h2>
+
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {photos.map((photo) => (
+                <a
+                  key={photo}
+                  href={photo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open larger image"
+                  className="group block overflow-hidden rounded-sm bg-[#f1f4f1]"
                 >
-                  <div
-                    className={`relative overflow-hidden bg-[#f1f4f1] ${
-                      item.size === "large"
-                        ? "aspect-[16/10]"
-                        : "aspect-[4/3]"
-                    }`}
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                    />
-
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent p-6 pt-20">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/80">
-                        {item.category}
-                      </p>
-
-                      <h2 className="mt-2 text-xl font-semibold text-white sm:text-2xl">
-                        {item.title}
-                      </h2>
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <p className="text-sm leading-7 text-gray-600">
-                      {item.description}
-                    </p>
-                  </div>
-                </article>
+                  <img
+                    src={photo}
+                    alt="Agricultural gallery photograph"
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  />
+                </a>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Visual statement */}
-        <section className="bg-[#f7f8f6] py-24 lg:py-28">
-          <div className="mx-auto max-w-5xl px-6 text-center lg:px-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-              Our Approach
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl lg:text-5xl">
-              Practical biological solutions for a changing agricultural
-              landscape.
+        <section className="bg-[#f7f8f6] py-12 lg:py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 className="mb-8 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
+              Videos
             </h2>
 
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
-              BPCI focuses on biological and plant nutrition solutions that
-              support healthier crops, healthier soil and more sustainable
-              farming practices.
-            </p>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {videos.map((video) => (
+                <div
+                  key={video}
+                  className="overflow-hidden rounded-sm border border-[var(--border)] bg-white"
+                >
+                  <video
+                    controls
+                    preload="metadata"
+                    playsInline
+                    className="aspect-video w-full bg-black"
+                  >
+                    <source src={video} type="video/mp4" />
+                    Your browser does not support HTML video.
+                  </video>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="bg-white py-20 lg:py-24">
+        <section className="bg-white py-16 lg:py-24">
           <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
               Explore BPCI
@@ -156,11 +133,6 @@ export default function GalleryPage() {
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
               Discover our biological solutions
             </h2>
-
-            <p className="mx-auto mt-5 max-w-2xl leading-7 text-gray-600">
-              Explore our complete range of plant nutrition, plant protection
-              and soil health products.
-            </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
