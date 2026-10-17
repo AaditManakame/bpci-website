@@ -1,9 +1,31 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import Navbar from "@/components/Navbar";
+
 import ProductFilters from "@/components/ProductFilters";
+
 import Reveal from "@/components/Reveal";
+
 import { products } from "@/data/products";
+
+export const metadata: Metadata = {
+  title: "Products",
+  description:
+    "Explore Bio Pest Control Industries' biological agricultural products, including biofertilizers, plant protection solutions, micronutrients, soil health products and botanical solutions.",
+  alternates: {
+    canonical: "https://www.biopestindia.com/products",
+  },
+  openGraph: {
+    title: "Agricultural Biological Products | Bio Pest Control Industries",
+    description:
+      "Explore BPCI's portfolio of biofertilizers, plant nutrition, plant protection and soil health products for sustainable agriculture.",
+    url: "https://www.biopestindia.com/products",
+    type: "website",
+    locale: "en_IN",
+    siteName: "Bio Pest Control Industries",
+  },
+};
 
 const categories = [
   {

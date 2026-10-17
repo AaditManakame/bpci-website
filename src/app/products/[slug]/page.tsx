@@ -1,6 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
 import Navbar from "@/components/Navbar";
+
 import { getProduct, products } from "@/data/products";
 
 type ProductPageProps = {
@@ -9,10 +12,56 @@ type ProductPageProps = {
   }>;
 };
 
+const siteUrl = "https://www.biopestindia.com";
+
 export function generateStaticParams() {
   return products.map((product) => ({
     slug: product.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: ProductPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const product = getProduct(slug);
+
+  if (!product) {
+    return {
+      title: "Product Not Found",
+      description: "The requested BPCI product could not be found.",
+    };
+  }
+
+  const productUrl = `${siteUrl}/products/${product.slug}`;
+
+  return {
+    title: product.name,
+    description: product.description,
+    alternates: {
+      canonical: productUrl,
+    },
+    openGraph: {
+      title: `${product.name} | Bio Pest Control Industries`,
+      description: product.description,
+      url: productUrl,
+      siteName: "Bio Pest Control Industries",
+      type: "website",
+      locale: "en_IN",
+      images: [
+        {
+          url: product.image,
+          alt: product.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      title: `${product.name} | Bio Pest Control Industries`,
+      description: product.description,
+      images: [product.image],
+    },
+  };
 }
 
 export default async function ProductDetailPage({
@@ -36,11 +85,39 @@ export default async function ProductDetailPage({
     .toLowerCase()
     .replaceAll(" ", "-");
 
+  const productUrl = `${siteUrl}/products/${product.slug}`;
+
+  const productStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.description,
+    image: `${siteUrl}${product.image}`,
+    url: productUrl,
+    brand: {
+      "@type": "Brand",
+      name: "Bio Pest Control Industries",
+    },
+    manufacturer: {
+      "@type": "Organization",
+      name: "Bio Pest Control Industries",
+      url: siteUrl,
+    },
+    category: product.category,
+  };
+
   return (
     <>
       <Navbar />
 
       <main>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(productStructuredData),
+          }}
+        />
+
         {/* Product Header */}
         <section className="bg-[#f7f8f6] py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -60,9 +137,7 @@ export default async function ProductDetailPage({
                 {product.name}
               </h1>
 
-              <p className="mt-5 text-lg text-gray-600">
-                {product.type}
-              </p>
+              <p className="mt-5 text-lg text-gray-600">{product.type}</p>
             </div>
           </div>
         </section>
@@ -226,7 +301,7 @@ export default async function ProductDetailPage({
 
             <p className="mx-auto mt-5 max-w-2xl leading-7 text-gray-600">
               Explore biological, plant nutrition, plant protection and soil
-              health solutions from Bio Pest  Control Industries.
+              health solutions from Bio Pest Control Industries.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">

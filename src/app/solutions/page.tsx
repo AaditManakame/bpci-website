@@ -1,5 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
 import Navbar from "@/components/Navbar";
+
+export const metadata: Metadata = {
+  title: "Solutions",
+  description:
+    "Explore Bio Pest Control Industries solutions for plant nutrition, plant protection and soil health, including biological, botanical and micronutrient products for sustainable agriculture.",
+  alternates: {
+    canonical: "https://www.biopestindia.com/solutions",
+  },
+  openGraph: {
+    title: "Agricultural Solutions | Bio Pest Control Industries",
+    description:
+      "Explore BPCI's biological, plant nutrition, plant protection and soil health solutions for sustainable agriculture.",
+    url: "https://www.biopestindia.com/solutions",
+    type: "website",
+    locale: "en_IN",
+    siteName: "Bio Pest Control Industries",
+  },
+};
 
 const solutions = [
   {

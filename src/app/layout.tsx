@@ -8,6 +8,39 @@ import "./globals.css";
 
 const siteUrl = "https://www.biopestindia.com";
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Bio Pest Control Industries",
+  url: siteUrl,
+  logo: `${siteUrl}/icon.png`,
+  description:
+    "Bio Pest Control Industries provides biological, plant nutrition, plant protection and soil health solutions for sustainable agriculture.",
+  email: "bpcibangalore@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "#51/3, Agrahara, Yelahanka",
+    addressLocality: "Bengaluru",
+    postalCode: "560064",
+    addressCountry: "IN",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+91 9341972727",
+      email: "bpcibangalore@gmail.com",
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+91 7019639489",
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+91 9845830168",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
@@ -87,6 +120,13 @@ export default function RootLayout({
       <head>
         <link rel="canonical" href={siteUrl} />
         <meta property="og:url" content={siteUrl} />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
       </head>
 
       <body>

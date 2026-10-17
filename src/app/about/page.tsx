@@ -1,6 +1,24 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn about Bio Pest Control Industries, a Bengaluru-based agricultural biological products company providing biofertilizers, plant protection, plant nutrition and soil health solutions.",
+  alternates: {
+    canonical: "https://www.biopestindia.com/about",
+  },
+  openGraph: {
+    title: "About Us | Bio Pest Control Industries",
+    description:
+      "Learn about Bio Pest Control Industries and our biological, plant nutrition, plant protection and soil health solutions for sustainable agriculture.",
+    url: "https://www.biopestindia.com/about",
+    type: "website",
+    locale: "en_IN",
+    siteName: "Bio Pest Control Industries",
+  },
+};
 const solutionAreas = [
   {
     number: "01",
