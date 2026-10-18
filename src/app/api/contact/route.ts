@@ -6,6 +6,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const allowedOrigins = [
   "http://localhost:3000",
   "https://bpci-website.vercel.app",
+  "https://biopestindia.com",
+  "https://www.biopestindia.com",
 ];
 
 export async function POST(request: Request) {
