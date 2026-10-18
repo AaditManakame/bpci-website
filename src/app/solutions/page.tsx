@@ -115,9 +115,13 @@ export default function SolutionsPage() {
                 Our Solutions
               </p>
 
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--foreground)] sm:text-5xl lg:text-6xl">
-                Biological solutions across the agricultural cycle.
-              </h1>
+              
+<h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--foreground)] sm:text-5xl lg:text-6xl">
+  Targeted Solutions
+  <br />
+  For Healthier Crops.
+</h1>
+
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600">
                 BPCI develops and supplies biological, plant nutrition, plant

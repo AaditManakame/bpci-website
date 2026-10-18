@@ -232,9 +232,15 @@ export default async function ProductsPage({
                     BPCI Product Portfolio
                   </p>
 
-                  <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.04] tracking-[-0.04em] text-[var(--foreground)] sm:text-6xl lg:text-7xl">
-                    Biological solutions for the modern farm.
-                  </h1>
+                  
+<h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.04] tracking-[-0.04em] text-[var(--foreground)] sm:text-6xl lg:text-7xl">
+  Crop Protection
+  <br />
+  and Nutrition,
+  <br />
+  Backed by Science.
+</h1>
+
 
                   <p className="mt-7 max-w-2xl text-lg leading-8 text-gray-600">
                     Explore BPCI&apos;s portfolio of biological, plant nutrition,

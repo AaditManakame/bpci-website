@@ -34,13 +34,17 @@ export default function Home() {
                 Bio Pest  Control Industries
               </p>
 
-              <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
-                Biological solutions
-                <br />
-                for sustainable
-                <br />
-                agriculture.
-              </h1>
+              
+<h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-8xl">
+  Advancing
+  <br />
+  Agriculture
+  <br />
+  Through Biological
+  <br />
+  Innovation.
+</h1>
+
 
               <p className="mt-8 max-w-2xl text-lg leading-8 text-white/85 sm:text-xl">
                 Quality biofertilizers, biological crop protection, botanical
